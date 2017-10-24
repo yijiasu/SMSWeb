@@ -11,7 +11,7 @@ const RECV_FILE_PATH = '../public/recv_sms.json'
 const CONFIG_FILE_PATH = '../public/config.json'
 
 const SER2NET_PORT = 2000
-const SER2NET_ADDR = '192.168.50.50'
+const SER2NET_ADDR = os.hostname() == 'raspberrypi' ? '127.0.0.1' : '192.168.50.50'
 
 const rl = readline.createInterface({
   input: process.stdin,
