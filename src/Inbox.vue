@@ -69,7 +69,7 @@ import _ from 'lodash'
 
 export default {
   mounted() {
-    axios.get(`/public/recv_sms.json`)
+    axios.get(`/public/data/recv_sms.json`)
     .then(response => {
       console.log(response.data)
       this.items = response.data
