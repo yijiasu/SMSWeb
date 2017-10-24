@@ -1,5 +1,5 @@
 // read all msg = AT+CMGL=4
-
+const os = require('os')
 const _ = require('lodash')
 const net = require('net')
 
@@ -7,8 +7,8 @@ const readline = require('readline');
 const pdu = require('pdu');
 const fs = require('fs');
 
-const RECV_FILE_PATH = '../public/recv_sms.json'
-const CONFIG_FILE_PATH = '../public/config.json'
+const RECV_FILE_PATH = '../public/data/recv_sms.json'
+const CONFIG_FILE_PATH = '../public/data/config.json'
 
 const SER2NET_PORT = 2000
 const SER2NET_ADDR = os.hostname() == 'raspberrypi' ? '127.0.0.1' : '192.168.50.50'
